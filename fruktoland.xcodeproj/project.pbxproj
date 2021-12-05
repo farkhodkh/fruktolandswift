@@ -8,17 +8,55 @@
 
 /* Begin PBXBuildFile section */
 		11976A86275D2FAD00784E9F /* fruktolandApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976A85275D2FAD00784E9F /* fruktolandApp.swift */; };
-		11976A88275D2FAD00784E9F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976A87275D2FAD00784E9F /* ContentView.swift */; };
 		11976A8A275D2FAE00784E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11976A89275D2FAE00784E9F /* Assets.xcassets */; };
 		11976A8D275D2FAE00784E9F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11976A8C275D2FAE00784E9F /* Preview Assets.xcassets */; };
+		11976A96275D302C00784E9F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976A95275D302C00784E9F /* Constants.swift */; };
+		11976A98275D304400784E9F /* TabItemEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976A97275D304400784E9F /* TabItemEnum.swift */; };
+		11976A9C275D306C00784E9F /* ApiInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976A9B275D306C00784E9F /* ApiInteractor.swift */; };
+		11976A9E275D309400784E9F /* DataBaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976A9D275D309400784E9F /* DataBaseInteractor.swift */; };
+		11976AA1275D30B800784E9F /* HomeItemViewGoodsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976AA0275D30B800784E9F /* HomeItemViewGoodsViewModel.swift */; };
+		11976AA6275D30EF00784E9F /* GoodsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976AA5275D30EF00784E9F /* GoodsItem.swift */; };
+		11976AA8275D311200784E9F /* CatalogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976AA7275D311200784E9F /* CatalogItem.swift */; };
+		11976AAA275D312F00784E9F /* CatalogsDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976AA9275D312F00784E9F /* CatalogsDto.swift */; };
+		11976AAC275D314400784E9F /* GoodsItemDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976AAB275D314400784E9F /* GoodsItemDto.swift */; };
+		11976AB0275D318800784E9F /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976AAF275D318800784E9F /* ImageLoader.swift */; };
+		11976AB2275D31A400784E9F /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976AB1275D31A400784E9F /* TabItem.swift */; };
+		11976AB4275D31E000784E9F /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976AB3275D31E000784E9F /* AsyncImage.swift */; };
+		11976AB7275D320F00784E9F /* GoodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976AB6275D320F00784E9F /* GoodsView.swift */; };
+		11976AB9275D322300784E9F /* GoodItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976AB8275D322300784E9F /* GoodItemView.swift */; };
+		11976ABC275D324800784E9F /* CatalogItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976ABB275D324800784E9F /* CatalogItemView.swift */; };
+		11976ABE275D326000784E9F /* CatalogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976ABD275D326000784E9F /* CatalogListView.swift */; };
+		11976AC0275D327D00784E9F /* CatalogItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976ABF275D327D00784E9F /* CatalogItemsList.swift */; };
+		11976AC2275D329C00784E9F /* FruktoLandMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976AC1275D329C00784E9F /* FruktoLandMainView.swift */; };
+		11976AC4275D32B400784E9F /* HomeItemViewBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976AC3275D32B400784E9F /* HomeItemViewBasket.swift */; };
+		11976AC7275D32CE00784E9F /* HomeItemViewGoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976AC6275D32CE00784E9F /* HomeItemViewGoods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11976A82275D2FAD00784E9F /* fruktoland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fruktoland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11976A85275D2FAD00784E9F /* fruktolandApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fruktolandApp.swift; sourceTree = "<group>"; };
-		11976A87275D2FAD00784E9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		11976A89275D2FAE00784E9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11976A8C275D2FAE00784E9F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		11976A95275D302C00784E9F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		11976A97275D304400784E9F /* TabItemEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemEnum.swift; sourceTree = "<group>"; };
+		11976A9B275D306C00784E9F /* ApiInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiInteractor.swift; sourceTree = "<group>"; };
+		11976A9D275D309400784E9F /* DataBaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseInteractor.swift; sourceTree = "<group>"; };
+		11976AA0275D30B800784E9F /* HomeItemViewGoodsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemViewGoodsViewModel.swift; sourceTree = "<group>"; };
+		11976AA5275D30EF00784E9F /* GoodsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsItem.swift; sourceTree = "<group>"; };
+		11976AA7275D311200784E9F /* CatalogItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItem.swift; sourceTree = "<group>"; };
+		11976AA9275D312F00784E9F /* CatalogsDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogsDto.swift; sourceTree = "<group>"; };
+		11976AAB275D314400784E9F /* GoodsItemDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsItemDto.swift; sourceTree = "<group>"; };
+		11976AAF275D318800784E9F /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		11976AB1275D31A400784E9F /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		11976AB3275D31E000784E9F /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		11976AB6275D320F00784E9F /* GoodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsView.swift; sourceTree = "<group>"; };
+		11976AB8275D322300784E9F /* GoodItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodItemView.swift; sourceTree = "<group>"; };
+		11976ABB275D324800784E9F /* CatalogItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemView.swift; sourceTree = "<group>"; };
+		11976ABD275D326000784E9F /* CatalogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogListView.swift; sourceTree = "<group>"; };
+		11976ABF275D327D00784E9F /* CatalogItemsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogItemsList.swift; sourceTree = "<group>"; };
+		11976AC1275D329C00784E9F /* FruktoLandMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruktoLandMainView.swift; sourceTree = "<group>"; };
+		11976AC3275D32B400784E9F /* HomeItemViewBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemViewBasket.swift; sourceTree = "<group>"; };
+		11976AC6275D32CE00784E9F /* HomeItemViewGoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemViewGoods.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +89,12 @@
 		11976A84275D2FAD00784E9F /* fruktoland */ = {
 			isa = PBXGroup;
 			children = (
+				11976AAD275D316300784E9F /* view */,
+				11976AA2275D30C900784E9F /* data */,
+				11976A9F275D30A900784E9F /* viewmodel */,
+				11976A99275D305700784E9F /* interactor */,
+				11976A94275D2FCE00784E9F /* common */,
 				11976A85275D2FAD00784E9F /* fruktolandApp.swift */,
-				11976A87275D2FAD00784E9F /* ContentView.swift */,
 				11976A89275D2FAE00784E9F /* Assets.xcassets */,
 				11976A8B275D2FAE00784E9F /* Preview Content */,
 			);
@@ -65,6 +107,101 @@
 				11976A8C275D2FAE00784E9F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		11976A94275D2FCE00784E9F /* common */ = {
+			isa = PBXGroup;
+			children = (
+				11976A95275D302C00784E9F /* Constants.swift */,
+				11976A97275D304400784E9F /* TabItemEnum.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		11976A99275D305700784E9F /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				11976A9B275D306C00784E9F /* ApiInteractor.swift */,
+				11976AAF275D318800784E9F /* ImageLoader.swift */,
+				11976A9D275D309400784E9F /* DataBaseInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		11976A9F275D30A900784E9F /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				11976AA0275D30B800784E9F /* HomeItemViewGoodsViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		11976AA2275D30C900784E9F /* data */ = {
+			isa = PBXGroup;
+			children = (
+				11976AA4275D30DD00784E9F /* dto */,
+				11976AA3275D30D400784E9F /* models */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		11976AA3275D30D400784E9F /* models */ = {
+			isa = PBXGroup;
+			children = (
+				11976AA5275D30EF00784E9F /* GoodsItem.swift */,
+				11976AA7275D311200784E9F /* CatalogItem.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		11976AA4275D30DD00784E9F /* dto */ = {
+			isa = PBXGroup;
+			children = (
+				11976AA9275D312F00784E9F /* CatalogsDto.swift */,
+				11976AAB275D314400784E9F /* GoodsItemDto.swift */,
+			);
+			path = dto;
+			sourceTree = "<group>";
+		};
+		11976AAD275D316300784E9F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				11976ABA275D323600784E9F /* catalog */,
+				11976AB5275D31F500784E9F /* goods */,
+				11976AAE275D316D00784E9F /* common */,
+				11976AC1275D329C00784E9F /* FruktoLandMainView.swift */,
+				11976AC3275D32B400784E9F /* HomeItemViewBasket.swift */,
+				11976AC6275D32CE00784E9F /* HomeItemViewGoods.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		11976AAE275D316D00784E9F /* common */ = {
+			isa = PBXGroup;
+			children = (
+				11976AB1275D31A400784E9F /* TabItem.swift */,
+				11976AB3275D31E000784E9F /* AsyncImage.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		11976AB5275D31F500784E9F /* goods */ = {
+			isa = PBXGroup;
+			children = (
+				11976AB6275D320F00784E9F /* GoodsView.swift */,
+				11976AB8275D322300784E9F /* GoodItemView.swift */,
+			);
+			path = goods;
+			sourceTree = "<group>";
+		};
+		11976ABA275D323600784E9F /* catalog */ = {
+			isa = PBXGroup;
+			children = (
+				11976ABB275D324800784E9F /* CatalogItemView.swift */,
+				11976ABD275D326000784E9F /* CatalogListView.swift */,
+				11976ABF275D327D00784E9F /* CatalogItemsList.swift */,
+			);
+			path = catalog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +274,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11976A88275D2FAD00784E9F /* ContentView.swift in Sources */,
+				11976AB9275D322300784E9F /* GoodItemView.swift in Sources */,
+				11976AB4275D31E000784E9F /* AsyncImage.swift in Sources */,
+				11976AAC275D314400784E9F /* GoodsItemDto.swift in Sources */,
+				11976AB0275D318800784E9F /* ImageLoader.swift in Sources */,
 				11976A86275D2FAD00784E9F /* fruktolandApp.swift in Sources */,
+				11976A96275D302C00784E9F /* Constants.swift in Sources */,
+				11976AA8275D311200784E9F /* CatalogItem.swift in Sources */,
+				11976AB7275D320F00784E9F /* GoodsView.swift in Sources */,
+				11976AC2275D329C00784E9F /* FruktoLandMainView.swift in Sources */,
+				11976AB2275D31A400784E9F /* TabItem.swift in Sources */,
+				11976ABE275D326000784E9F /* CatalogListView.swift in Sources */,
+				11976A9C275D306C00784E9F /* ApiInteractor.swift in Sources */,
+				11976ABC275D324800784E9F /* CatalogItemView.swift in Sources */,
+				11976A98275D304400784E9F /* TabItemEnum.swift in Sources */,
+				11976AA6275D30EF00784E9F /* GoodsItem.swift in Sources */,
+				11976AC0275D327D00784E9F /* CatalogItemsList.swift in Sources */,
+				11976AC7275D32CE00784E9F /* HomeItemViewGoods.swift in Sources */,
+				11976AA1275D30B800784E9F /* HomeItemViewGoodsViewModel.swift in Sources */,
+				11976AC4275D32B400784E9F /* HomeItemViewBasket.swift in Sources */,
+				11976A9E275D309400784E9F /* DataBaseInteractor.swift in Sources */,
+				11976AAA275D312F00784E9F /* CatalogsDto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +425,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"fruktoland/Preview Content\"";
+				DEVELOPMENT_TEAM = DHKYX69V83;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -282,7 +439,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.frikto-land.fruktoland";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = fruktoland;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -297,6 +454,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"fruktoland/Preview Content\"";
+				DEVELOPMENT_TEAM = DHKYX69V83;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -310,7 +468,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.frikto-land.fruktoland";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = fruktoland;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
