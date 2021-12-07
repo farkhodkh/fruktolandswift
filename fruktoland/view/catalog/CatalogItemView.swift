@@ -19,7 +19,7 @@ struct CatalogItemView: View {
         
         VStack(alignment: .center) {
             Text(catalogName)
-                .font(.system(size: 16, weight: .medium, design: .default))
+                .font(.system(size: 15, weight: .medium, design: .default))
                 .foregroundColor(isNight ? .white : .black)
                 .multilineTextAlignment(.center)
                 .lineLimit(catalogName.count < 12 ? 1: 2)
