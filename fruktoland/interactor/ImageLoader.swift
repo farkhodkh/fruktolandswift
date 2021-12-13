@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Combine
+import Alamofire
 
 class ImageLoader: ObservableObject {
     @Published var image: UIImage?
@@ -23,11 +24,11 @@ class ImageLoader: ObservableObject {
     }
     
     func load() {
-        cancellable = URLSession.shared.dataTaskPublisher(for: url)
-            .map { UIImage(data: $0.data) }
-            .replaceError(with: nil)
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] in self?.image = $0 }
+        AF.download(url).responseData { response in
+            if let data = response.value {
+                self.image = UIImage(data: data)
+            }
+        }
     }
 
     func cancel() {

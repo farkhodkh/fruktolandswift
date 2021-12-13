@@ -7,9 +7,6 @@
 
 import Foundation
 
-
-import Foundation
-
 struct GoodsItem : Identifiable, Decodable {
     let id: Int
     let good_name: String

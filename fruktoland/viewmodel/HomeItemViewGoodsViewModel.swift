@@ -7,12 +7,13 @@
 
 
 import SwiftUI
+import Alamofire
 
 final class HomeItemViewGoodsViewModel : ObservableObject {
     @Published var goodsList: [GoodsItem] = []
     @Published var catalogsList: [CatalogItem] = []
     @Published var isLoading = false
-
+    
     init() {
         //getCatalogList()
         getCatalogs()
@@ -24,22 +25,19 @@ final class HomeItemViewGoodsViewModel : ObservableObject {
         
         let urlString = Constants.BASE_URL + "/frukto-land/hs/exchange/fl/" + Constants.VERSION + "/getstock/?catalogId=" + String(catalogId)
         
-        guard let url = URL(string: urlString) else { return }
+        let headers: HTTPHeaders = ["Authorization": "Basic " + Constants.TOKEN]
         
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.setValue("Basic " + Constants.TOKEN, forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        let task = URLSession
-            .shared
-            .dataTask(with: request) { data, response, error in
+        AF
+            .request(
+                urlString,
+                method: .get,
+                parameters: nil,
+                encoding: URLEncoding.default,
+                headers: headers
+            )
+            .response { response in
                 
-                print(String(decoding: data!, as: UTF8.self))
-                print(response)
-                print(error)
-                
-                guard let responseData = data else {return}
+                guard let responseData = response.data else {return}
                 
                 do {
                     let goodsDtoList = try JSONDecoder().decode(GoodsItemDto.self, from: responseData)
@@ -65,8 +63,6 @@ final class HomeItemViewGoodsViewModel : ObservableObject {
                     self.isLoading = false
                 }
             }
-        
-        task.resume()
     }
     
     func getCatalogs() {
@@ -74,23 +70,19 @@ final class HomeItemViewGoodsViewModel : ObservableObject {
         self.catalogsList.removeAll()
         
         let urlString = Constants.BASE_URL + "/frukto-land/hs/exchange/fl/" + Constants.VERSION + "/getcatalog/"
-        guard let url = URL(string: urlString) else { return }
         
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.setValue("Basic " + Constants.TOKEN, forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let headers: HTTPHeaders = ["Authorization": "Basic " + Constants.TOKEN]
         
-        let task = URLSession
-            .shared
-            .dataTask(with: request) { data, response, error in
-                
-                print(String(decoding: data!, as: UTF8.self))
-                print(response)
-                print(error)
-                
-                guard let responseData = data else {return}
-                
+        AF
+            .request(
+                urlString,
+                method: .get,
+                parameters: nil,
+                encoding: URLEncoding.default,
+                headers: headers
+            )
+            .response { response in
+                guard let responseData = response.data else {return}
                 do {
                     let catalogsDtoList = try JSONDecoder().decode(CatalogsDto.self, from: responseData)
                     
@@ -115,21 +107,19 @@ final class HomeItemViewGoodsViewModel : ObservableObject {
                     self.isLoading = false
                 }
             }
-        
-        task.resume()
     }
-//
-//    func getCatalogList() {
-//        self.catalogsList = [
-//            CatalogItem(id: 0, catalog_name: "Фрукты", catalog_image: "frukto-land-fruits", catalog_order: 0),
-//            CatalogItem(id: 1, catalog_name: "Ягоды", catalog_image: "frukto-land-trawberry-outline", catalog_order: 1),
-//            CatalogItem(id: 2, catalog_name: "Овощи", catalog_image: "rukto-land-carrot-outline", catalog_order: 1),
-//            CatalogItem(id: 3, catalog_name: "Овощи 1", catalog_image: "rukto-land-carrot-outline", catalog_order: 1),
-//            CatalogItem(id: 4, catalog_name: "Овощи 2", catalog_image: "rukto-land-carrot-outline", catalog_order: 1),
-//            CatalogItem(id: 5, catalog_name: "Овощи 3", catalog_image: "rukto-land-carrot-outline", catalog_order: 1),
-//            CatalogItem(id: 6, catalog_name: "Овощи 4", catalog_image: "rukto-land-carrot-outline", catalog_order: 1),
-//        ]
-//    }
+    //
+    //    func getCatalogList() {
+    //        self.catalogsList = [
+    //            CatalogItem(id: 0, catalog_name: "Фрукты", catalog_image: "frukto-land-fruits", catalog_order: 0),
+    //            CatalogItem(id: 1, catalog_name: "Ягоды", catalog_image: "frukto-land-trawberry-outline", catalog_order: 1),
+    //            CatalogItem(id: 2, catalog_name: "Овощи", catalog_image: "rukto-land-carrot-outline", catalog_order: 1),
+    //            CatalogItem(id: 3, catalog_name: "Овощи 1", catalog_image: "rukto-land-carrot-outline", catalog_order: 1),
+    //            CatalogItem(id: 4, catalog_name: "Овощи 2", catalog_image: "rukto-land-carrot-outline", catalog_order: 1),
+    //            CatalogItem(id: 5, catalog_name: "Овощи 3", catalog_image: "rukto-land-carrot-outline", catalog_order: 1),
+    //            CatalogItem(id: 6, catalog_name: "Овощи 4", catalog_image: "rukto-land-carrot-outline", catalog_order: 1),
+    //        ]
+    //    }
     
     func getCatalogNameById(id: Int) -> String {
         return catalogsList.first { catalogItem in

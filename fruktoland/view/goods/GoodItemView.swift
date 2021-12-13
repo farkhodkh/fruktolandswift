@@ -69,7 +69,7 @@ struct GoodItemView : View {
                 .multilineTextAlignment(.center)
                 
                 Button {
-                    print("Button was tapped")
+                    incrementQtty(qtty: qtty)
                 } label: {
                     Image(isNight ? "icon-minus-white" : "icon-minus-black")
                         .resizable()
@@ -79,6 +79,10 @@ struct GoodItemView : View {
             Divider()
         }
     }
+}
+
+func incrementQtty(qtty: Int) {
+    
 }
 
 struct GoodItemView_Previews: PreviewProvider {

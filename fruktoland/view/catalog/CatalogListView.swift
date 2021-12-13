@@ -13,9 +13,8 @@ struct CatalogListView : View {
     var onTapGesture: (Int) -> ()
     
     private let columns: [GridItem] = [
-        GridItem(.fixed(100), spacing: 8),
-        GridItem(.fixed(100), spacing: 8),
-        GridItem(.fixed(100), spacing: 8)
+        GridItem(.fixed(150), spacing: 8),
+        GridItem(.fixed(150), spacing: 8)
     ]
     
     var body: some View {

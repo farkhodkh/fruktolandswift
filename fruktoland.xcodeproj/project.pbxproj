@@ -30,9 +30,12 @@
 		11976AC2275D329C00784E9F /* FruktoLandMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976AC1275D329C00784E9F /* FruktoLandMainView.swift */; };
 		11976AC4275D32B400784E9F /* HomeItemViewBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976AC3275D32B400784E9F /* HomeItemViewBasket.swift */; };
 		11976AC7275D32CE00784E9F /* HomeItemViewGoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11976AC6275D32CE00784E9F /* HomeItemViewGoods.swift */; };
+		11C1AFBD2767DCD300229D1C /* FruktoLandModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11C1AFBB2767DCD300229D1C /* FruktoLandModel.xcdatamodeld */; };
+		2368DB1C1C3A5408010ADD99 /* Pods_fruktoland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069AD3F6B18326EA6E7F9F55 /* Pods_fruktoland.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		069AD3F6B18326EA6E7F9F55 /* Pods_fruktoland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fruktoland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11976A82275D2FAD00784E9F /* fruktoland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fruktoland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11976A85275D2FAD00784E9F /* fruktolandApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fruktolandApp.swift; sourceTree = "<group>"; };
 		11976A89275D2FAE00784E9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +60,9 @@
 		11976AC1275D329C00784E9F /* FruktoLandMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruktoLandMainView.swift; sourceTree = "<group>"; };
 		11976AC3275D32B400784E9F /* HomeItemViewBasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemViewBasket.swift; sourceTree = "<group>"; };
 		11976AC6275D32CE00784E9F /* HomeItemViewGoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemViewGoods.swift; sourceTree = "<group>"; };
+		11C1AFBC2767DCD300229D1C /* FruktoLandModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FruktoLandModel.xcdatamodel; sourceTree = "<group>"; };
+		5E65B9D82049B6DECD341911 /* Pods-fruktoland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fruktoland.release.xcconfig"; path = "Target Support Files/Pods-fruktoland/Pods-fruktoland.release.xcconfig"; sourceTree = "<group>"; };
+		E0B56A052FABE0EF007ABB09 /* Pods-fruktoland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fruktoland.debug.xcconfig"; path = "Target Support Files/Pods-fruktoland/Pods-fruktoland.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2368DB1C1C3A5408010ADD99 /* Pods_fruktoland.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +82,8 @@
 			children = (
 				11976A84275D2FAD00784E9F /* fruktoland */,
 				11976A83275D2FAD00784E9F /* Products */,
+				CC81F29976696F358B8EEF37 /* Pods */,
+				824F7719F26F3066A670FCAA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +106,7 @@
 				11976A85275D2FAD00784E9F /* fruktolandApp.swift */,
 				11976A89275D2FAE00784E9F /* Assets.xcassets */,
 				11976A8B275D2FAE00784E9F /* Preview Content */,
+				11C1AFBB2767DCD300229D1C /* FruktoLandModel.xcdatamodeld */,
 			);
 			path = fruktoland;
 			sourceTree = "<group>";
@@ -204,6 +214,23 @@
 			path = catalog;
 			sourceTree = "<group>";
 		};
+		824F7719F26F3066A670FCAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				069AD3F6B18326EA6E7F9F55 /* Pods_fruktoland.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC81F29976696F358B8EEF37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0B56A052FABE0EF007ABB09 /* Pods-fruktoland.debug.xcconfig */,
+				5E65B9D82049B6DECD341911 /* Pods-fruktoland.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11976A90275D2FAE00784E9F /* Build configuration list for PBXNativeTarget "fruktoland" */;
 			buildPhases = (
+				BB8D9C899E57235213AA963C /* [CP] Check Pods Manifest.lock */,
 				11976A7E275D2FAD00784E9F /* Sources */,
 				11976A7F275D2FAD00784E9F /* Frameworks */,
 				11976A80275D2FAD00784E9F /* Resources */,
+				877D36BDEBC222928E85AB0D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -269,6 +298,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		877D36BDEBC222928E85AB0D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fruktoland/Pods-fruktoland-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fruktoland/Pods-fruktoland-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fruktoland/Pods-fruktoland-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB8D9C899E57235213AA963C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fruktoland-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		11976A7E275D2FAD00784E9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -277,6 +348,7 @@
 				11976AB9275D322300784E9F /* GoodItemView.swift in Sources */,
 				11976AB4275D31E000784E9F /* AsyncImage.swift in Sources */,
 				11976AAC275D314400784E9F /* GoodsItemDto.swift in Sources */,
+				11C1AFBD2767DCD300229D1C /* FruktoLandModel.xcdatamodeld in Sources */,
 				11976AB0275D318800784E9F /* ImageLoader.swift in Sources */,
 				11976A86275D2FAD00784E9F /* fruktolandApp.swift in Sources */,
 				11976A96275D302C00784E9F /* Constants.swift in Sources */,
@@ -419,6 +491,7 @@
 		};
 		11976A91275D2FAE00784E9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0B56A052FABE0EF007ABB09 /* Pods-fruktoland.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -448,6 +521,7 @@
 		};
 		11976A92275D2FAE00784E9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E65B9D82049B6DECD341911 /* Pods-fruktoland.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -497,6 +571,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		11C1AFBB2767DCD300229D1C /* FruktoLandModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				11C1AFBC2767DCD300229D1C /* FruktoLandModel.xcdatamodel */,
+			);
+			currentVersion = 11C1AFBC2767DCD300229D1C /* FruktoLandModel.xcdatamodel */;
+			path = FruktoLandModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 11976A7A275D2FAD00784E9F /* Project object */;
 }
