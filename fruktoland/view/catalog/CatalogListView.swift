@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CatalogListView : View {
     var isNight: Bool = false
-    var viewModel: HomeItemViewGoodsViewModel
+    var viewModel: GoodsViewModel
     var onTapGesture: (Int) -> ()
     
     private let columns: [GridItem] = [
@@ -54,7 +54,7 @@ struct CatalogListView_Previews: PreviewProvider {
         ForEach(ColorScheme.allCases, id: \.self) {
             CatalogListView(
                 isNight: $0 == .light ? false : true,
-                viewModel: HomeItemViewGoodsViewModel(),
+                viewModel: GoodsViewModel(),
                 onTapGesture: {_ in}
             ).preferredColorScheme($0)
         }

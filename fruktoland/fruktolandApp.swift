@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct fruktolandApp: App {
+    let persistenceController = FruktoLandPersistenceController.shared
+    
     var body: some Scene {
         WindowGroup {
             FruktoLandMainView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

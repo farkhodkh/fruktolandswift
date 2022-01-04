@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+    <entity name="GoodItemModel" representedClassName="GoodItemModel" syncable="YES" codeGenerationType="class">
+        <attribute name="good_code" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="good_description" optional="YES" attributeType="String"/>
+        <attribute name="good_name" optional="YES" attributeType="String"/>
+        <attribute name="good_price" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="good_qtty" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="good_unit" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image_address" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="GoodItemModel" positionX="-63" positionY="-18" width="128" height="149"/>
+    </elements>
 </model>

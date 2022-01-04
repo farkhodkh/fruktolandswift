@@ -8,11 +8,18 @@
 
 import SwiftUI
 import Alamofire
+import CoreData
 
-final class HomeItemViewGoodsViewModel : ObservableObject {
+final class GoodsViewModel : ObservableObject {
     @Published var goodsList: [GoodsItem] = []
     @Published var catalogsList: [CatalogItem] = []
     @Published var isLoading = false
+    @Environment(\.managedObjectContext) private var viewContext
+
+//    @FetchRequest(
+//        sortDescriptors: [NSSortDescriptor(keyPath: \GoodItemModel.good_code, ascending: true)],
+//        animation: .default)
+//    private var basketItems: FetchedResults<GoodItemModel>
     
     init() {
         //getCatalogList()
@@ -39,16 +46,30 @@ final class HomeItemViewGoodsViewModel : ObservableObject {
                 
                 guard let responseData = response.data else {return}
                 
+//                self.basketItems.forEach{ itemModel in
+//                    var b = 0
+//                }
+                
                 do {
+
+                    let storedItems = self.allShoppingItems()
+                    
                     let goodsDtoList = try JSONDecoder().decode(GoodsItemDto.self, from: responseData)
+                    
                     for goodDto in goodsDtoList.stock_lines.sorted{ $0.good_name ?? "" > $1.good_name ?? ""} {
+//                        let storedQtty = storedItems.first(where: { item in
+//                            item.good_code == Int(goodDto.good_code ?? "0")!
+//                        })?.good_qtty ?? 0
+                        
+                        let storedQtty = 0
                         
                         let fullURL = Constants.BASE_URL + "/" + (goodDto.image_address ?? "")
+
                         self.goodsList.insert(
                             GoodsItem(
                                 id: Int(goodDto.good_code ?? "0")!,
                                 good_name: goodDto.good_name ?? "",
-                                good_qtty: 0,
+                                good_qtty: Int(storedQtty),
                                 good_code: Int(goodDto.good_code ?? "0")!,
                                 good_unit: goodDto.good_unit ?? "кг",
                                 description: goodDto.good_group_name ?? "",
@@ -63,6 +84,18 @@ final class HomeItemViewGoodsViewModel : ObservableObject {
                     self.isLoading = false
                 }
             }
+    }
+    
+    func allShoppingItems() -> [GoodItemModel] {
+        let fetchRequest: NSFetchRequest<GoodItemModel> = GoodItemModel.fetchRequest()
+        do {
+            let items = try self.viewContext.fetch(fetchRequest)
+            return items
+        }
+        catch let error as NSError {
+            print("Error getting ShoppingItems: \(error.localizedDescription), \(error.userInfo)")
+        }
+        return [GoodItemModel]()
     }
     
     func getCatalogs() {

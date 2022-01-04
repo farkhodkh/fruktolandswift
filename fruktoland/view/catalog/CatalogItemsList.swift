@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CatalogItemsList : View {
-    var viewModel: HomeItemViewGoodsViewModel
+    var viewModel: GoodsViewModel
     var catalogTitle: String
     var isNight: Bool = false
     var catalogItems: [GoodsItem] = []
@@ -33,13 +33,8 @@ struct CatalogItemsList : View {
                         ForEach(0..<viewModel.goodsList.count, id: \.self) { index in
                             let item = viewModel.goodsList[index]
                             GoodItemView(
-                                id: item.id,
-                                name: item.good_name,
-                                price: item.good_price,
-                                measureUnit: item.good_unit,
-                                imageURLString: item.image_address,
-                                isNight: isNight,
-                                qtty: 0
+                                item: item,
+                                isNight: isNight
                             )
                         }
                     }
@@ -53,7 +48,7 @@ struct CatalogItemsList_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(ColorScheme.allCases, id: \.self) {
             CatalogItemsList(
-                viewModel: HomeItemViewGoodsViewModel(),
+                viewModel: GoodsViewModel(),
                 catalogTitle: "Фрукты",
                 isNight: $0 == .light ? false : true,
                 catalogItems: [

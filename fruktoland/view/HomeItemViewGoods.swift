@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeItemViewGoods : View {
     var isNight: Bool = false
-    @StateObject private var viewModel = HomeItemViewGoodsViewModel()
+    @StateObject private var viewModel = GoodsViewModel()
     @State private var isShowingDetailView = false
     @State private var catalogId: Int = 100
     
